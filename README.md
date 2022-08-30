@@ -93,6 +93,7 @@ While designing the solution following design practices have been kept in mind:
 - IntelliJ
 - Circle CI
 
+https://app.circleci.com/pipelines/github/ParthChd/FreeNow-Automation-Test/1/workflows/93efdbe5-93cf-402d-b2a5-a1f6d8c459b2/jobs/1
 
 ### Note 
 Integration with Circle CI is WIP, CI step is complete and currently upon doing a commit it would execute the test suite and depending upon the test result build would fail/pass. In future this can be integrated with AWS(or any other platform) to complete the continuous deployment step as well.
