@@ -57,6 +57,7 @@ public class UserBlogPostAndCommentsIntegrationTest {
                 userBlogUtil.setUserId(user.getId());
             }
         }
+        Assert.assertTrue(responseList.size() > 0);
     }
 
     @Test(dependsOnMethods = {"should_return_list_of_users_by_name_samantha"})
@@ -66,6 +67,7 @@ public class UserBlogPostAndCommentsIntegrationTest {
         List<Post> responseList = Arrays.asList(response.getBody().as(Post[].class));
         Set<Integer> postSet = responseList.stream().map(it -> it.getId()).collect(Collectors.toSet());
         userBlogUtil.setPosts(postSet);
+        Assert.assertTrue(userBlogUtil.getPosts().size()>0);
     }
 
     @Test(dependsOnMethods = {"should_return_list_of_post_by_user_id"})
