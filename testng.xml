@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="User Blog API Test Suite" parallel="classes" thread-count="3">
+    <listeners>
+        <listener
+                class-name="com.blog.example.reporting.ExtentListener">
+        </listener>
+    </listeners>
+
+    <test name="User_TestCase">
+        <classes>
+            <class name="com.user.blog.example.User_Testcases"/>
+        </classes>
+    </test>
+
+    <test name="Post_TestCase">
+        <classes>
+            <class name="com.user.blog.example.Posts_Testcases"/>
+        </classes>
+    </test>
+
+    <test name="Comments_TestCase">
+        <classes>
+            <class name="com.user.blog.example.Comments_Testcases"/>
+        </classes>
+    </test>
+
+    <test name="FreeNow_IntegrationTest">
+        <classes>
+            <class name="com.user.blog.example.freeNowIT.UserBlogPostAndCommentsIntegrationTest"/>
+        </classes>
+    </test>
+
+</suite>
